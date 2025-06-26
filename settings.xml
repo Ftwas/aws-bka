@@ -1,0 +1,23 @@
+<settings>
+<servers>
+  <server>
+    <id>bka-maven-central-store</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>bka-maven-central-store</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>bka-maven-central-store</id>
+        <url>https://bka-924651250918.d.codeartifact.eu-west-1.amazonaws.com/maven/maven-central-store/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+</settings>
